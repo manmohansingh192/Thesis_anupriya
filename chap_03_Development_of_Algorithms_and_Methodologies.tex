@@ -1,0 +1,83 @@
+\chapter{Research Methodology}
+\label{sec:3}
+\section{Data Collection and other Pre-requisites}
+We started with compiling the list of dhātus and their respective derived dhātus from the kṛdantakośa of Pushpa Dikhshita Vol.1 (Dikshita, 2014), sanskritworld.in (Dhaval Patel, n.d.), Siddhāntakaumudī Kaumudi of Bhattoji Dikshita (S.C.Vasu, 1905), The Mādhavīya DhātuVritti (Sayanacarya, 1964) and the roots, verb-forms and Primary Derivatives of the Sanskrit Language by W.D.Whitney (Whitney, 1885). The list of dhātus without the application of any pratyaya are considered as x, after the removal of anubandhas. The list of input dhātus and the output words/prātipadikas are the pre-requisites for the construction of functions.\\\\
+Anubandha is an indicatory letter or syllable which is attached to roots etc but is dropped in the final word i.e. pada as defined in the Monier Williams dictionary (Monier Williams, 2008 revised). Hence by this definition, $x$ is the part of the dhātu that remains after the removal of the anubandha. Hence, the knowledge of Anubandhas is one of the pre-requisistes for wrtiting the functions.\\\\
+Mathematically speaking, if all the enumerated elements were to mix freely, if any Pratyaya could be attached to any dhātu, the computation of the number of possible words is a simple multiplication of the number of options available in each (Nori, 2010, pp. 243-264). We have 22 prefixes in Sanskrit which are applied to approximately 2000 dhātus. san, ṇic and yaṅ are the 3 verbal derivative roots. Example, we can say that theoretically $1,32,000 (22 x 2000 x 3)$ words are possible for each Pratyaya.
+The output $y$, can again be fed into the function to obtain another derived dhātu. Thus, in theory this addition of suffixes can keep going on infinitely. However, the ability of human mind to process such complex strings puts a limit on these potentially infinite productions to a finite number and is supported by the actual data. Words with more than three suffixes are typically rare compared to the words with single suffix or double suffixes (Kulkarni and Shukl, 2009, p. 3).\\\\
+
+\section{Notation}  
+Let $x$ be the input dhātu. For the purpose of writing these functions, we start enumerating the syllables from left to right or from right to left depending upon that particular function. \\\\
+We can denote $x$ as, $x=(…., x(2), x(1)) = (x’(1), x’(2),)$. $x$ can be a consonant ($C$) or a vowel ($V$).\\
+The numbers $1, 2, 3,… $signify the position of the syllable. The notation $x$ (unprimed) is used when the syllables are counted right to left, and the notation $x’$ is used when the syllables are counted left to right.\\\\
+For example: $x =$ \texthindi{चुर,} then
+
+\begin{table}[h!]
+\begin{center}
+
+\begin{tabular}{ |c|c|c|c|c| } 
+ \hline
+\texthindi{चुर} = &\texthindi{च्}&	\texthindi{उ}	&\texthindi{र्}&	\texthindi{अ} \\ 
+\hline
+Right to left	&x(4)	&x(3)	&x(2)	&x(1) \\ 
+Left to right	&x’(1)	&x’(2)	&x’(3)	&x’(4) \\ 
+ \hline
+
+\end{tabular}
+\caption{Notation for syllables in input dhātu $x$}
+\label{table:5.1}
+\end{center}
+\end{table}
+
+Now, conversion is denoted by a right arrow with a number on the top. The number denotes the location of the conversion. 
+\\For example, $x[\text{\texthindi{अ}} \xrightarrow{2} \text{\texthindi{आ}]} $denotes that in the dhātu $x$, \texthindi{अ} which is at the 2nd place from the right is getting replaced with \texthindi{आ}.\\
+\section{Multivalued Functions}
+To account for more than two forms of a word, Pāṇini uses optional form rules to state that alternate forms are also possible. For example, sūtra (rule) 1.2.3 vibhaṣorṇoḥ states that ‘After the verb ūrṇa 'to cover', the affix beginning with the augment iṭ is regarded optionally like ṅit (Sutravali, 2020)’.\\
+The words used for optionality by Pāṇini are vā, vibhaṣā, anyatarasyām . vā appears 136 times, vibhaṣā appears 258 times and, anyatarasyām appears 161 times respectively in Aṣṭādhyāyī; including the ones that occur in Anuvṛtti\footnote{The number of times these words appear in Aṣṭādhyāyī ; including the ones that occur in Anuvritti have been calculated by using the ‘Ashtadhyayi sUtra pAtha with Anuvruttis’ done by Dr. V. Sheeba with the help of RSVP Shabdabodha students (2006-08).
+ (Program to generate the text from markings: Pawan Goyal, Ph.D. Student, IIT Kanpur Version Dated: 18th August, 2008)
+} . Pāṇini and all the commentators have given us no indication that they are supposed to be anything but synonyms. But the modern scholar Paul Kiparsky has wondered how could this be so, because Pāṇini has vowed to eliminate every needless extraneous syllable and their must be a deeper reason to suggest the use of three different terms. Hence, he has propounded the hypothesis in his well-argued study ‘Pāṇini as a Variationist’ that the three terms vā, vibhaṣā, anyatarasyām refer respectively to three different kinds of options: those that are preferable(vā), those that are marginal(vibhaṣā)and those that are simple options(anyatarasyām) (Sharma, 2018).\\
+
+\begin{center}
+\begin{table}[h!]
+\begin{tabular}{ |c|c| } 
+\hline
+preferable &\texthindi{वा} \\ 
+\hline
+marginal	&\texthindi{विभाषा }\\ 
+\hline
+simple options	&\texthindi{अन्यतरस्याम्} \\ 
+\hline
+\end{tabular}
+\caption{Three kinds of options given by Pāṇini}
+\label{table:5.2}
+\end{table}
+\end{center}
+One such case which results in such optional forms is represented in the Figure~\ref{fig:b} where the addition and absence of ‘\texthindi{इ}’ results in two forms and the change of ‘\texthindi{ह्}’ syllable to two different syllables further results in two forms. Thus, we end up with three forms of the same word.\\
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Figures/Multivalued.png}
+	\hspace{1mm}
+	\caption{An example of how a multivaled output is generated} 
+	\label{fig:b}
+\end{figure}
+
+The shaded boxes represent the three final output forms. Let us look at an example for this case for $x$ = \text{\texthindi{मुह्}} :- \\
+\begin{equation}
+    \text{\texthindi{तुमुन्(मुह्)}}=
+    \begin{cases}
+    x[\text{\texthindi{इ उ}}\xrightarrow{2} \text{\texthindi{ए ओ]}}+\phi+\text{\texthindi{तुम्}}\\
+    x[\text{\texthindi{इ उ}}\xrightarrow{2} \text{\texthindi{ए ओ]}]}$+$\phi $+$  \text{\texthindi{ढुम्}}\\
+    x[\text{\texthindi{इ उ}}\xrightarrow{2} \text{\texthindi{ए ओ]}]}+\text{\texthindi{इ}}$+$ \text{\texthindi{तुम्}}
+\end{cases}
+\end{equation}
+
+\begin{equation}
+   =
+    \begin{cases}
+   \text{\texthindi{ मोग्धुम्}}\\
+\text{\texthindi{ मोढुम् }}\\
+\text{\texthindi{मोहितुम्}}
+
+\end{cases}
+\end{equation}

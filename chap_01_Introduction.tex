@@ -1,0 +1,139 @@
+\chapter{Introduction}
+\section{Background}
+
+\label{sec:background}
+
+\lettrine[findent=2pt]{\textbf{G}}{}rammarian Pāṇini who is also known as the ‘grammatical genius’ has written the grammar of Sanskrit in a very concise manner in a book called Aṣṭādhyāyī written in the 7th century BCE. It contains 3959 sūtras or rules on linguistics, syntax and semantics of Sanskrit language which are distributed in 8 adhyāyas or chapters. Each adhyāya is divided into four quarters called pādas. Thus, there are in all thirty-two pādas in total.  Each pāda consists of a series of grammatical rules, called sūtras, that are related to each other. The number of sūtras in each pāda varies according to the topics, functions and organizational constraints (\cite{Sreenivas}). The knowledge of the previous sūtras is prerequisite to understand the next sūtras and hence the order in which these sūtras occur is also extremely important. \\\\
+A characterstic of Pāṇini’s grammar that sets it apart from the others is that it is ‘almost an exhaustive grammar for any human language with meticulous details yet small enough to memorize it’ (\cite{brevity}). This feature of the Aṣṭādhyāyī provides a structural base which paves a way for the mathematical modelling of Sanskrit language. In fact, Briggs (\cite{Briggs_1985}) even demonstrated in his article the salient features of Sanskrit language that can make it serve as an artificial language. Various efforts in mathematical modelling of natural languages including modelling of the Indian languages have been made before. \\\\
+Joseph Kallrath in his book ‘Modeling Languages in Mathematical Optimization’ says that ‘a modeling language serves the need to pass data and a mathematical model description to a solver in the same way that people especially mathematicians describe those problems to each other’ (\cite{kallrath}). Mathematical modelling of languages also impacts our understanding of the language and its grammar. As scholars are delving into the question of formalizing various natural languages, it is also having an impact on how we understand the language itself.\\\\
+Though well-defined rules for Sanskrit morphology exist in Aṣṭādhyāyī, for a typical computational linguist without any knowledge of Sanskrit, it is difficult to build a system incorporating these rules (\cite{Kulkarni2009SanskritMA}). For the grammar to fit mathematical functions, we ‘need a strong and unambiguous grammar which is provided by Maharishi Pāṇini in the form of Aṣṭādhyāyī’ (\cite{agrawal}). We have followed a similar approach, wherein we have modelled the Pratyayas in Sanskrit in the form of functions. Similar to mathematical functions which can be expressed as $y = f (x)$ where the function of accepts $x$ as an input giving out $y$ as an output; ‘the sūtras look for their preconditions in an input environment’ and give out a corresponding output. (\cite{malhar}). The Pratayaya Adhikāra runs from 3.1.1 (\texthindi{प्रत्यय:}) to all the way till 5th chapter. Adhikāra is basically the extent of the discussion of a particular topic in the Aṣṭādhyāyī. In fact the Pratayaya Adhikāra is one of the biggest Adhikāra in Aṣṭādhyāyī.\\\\
+According to how components of the target linguistic phenomenon are realized mathematically, available models of language evolution can be classified as rule-based and equation-based models. Equation-based models tend to transform linguistic and relevant behaviors into mathematical equations (\cite{agrawal}), which is what we have attempted to do as shown in the following chapters. However, ambiguity is inherent in the Natural Language sentences (\cite{Tapaswi2012TreebankBD}) and mathematical modelling of such natural languages also helps to remove this ambiguity. Traditionally too, there have been attempts by various scholars like Kātyāyana, Patanjali and Bhartṛhari to provide extensive commentaries. Several attempts have been made to address the ambiguities and give clarifications wherever applicable. They [the scholars who have written these commentaries] do not question Pāṇini’s basic model, but rather explain it, refine it and complete it (\cite{huet}). Explanations and clarifications in the form of vārtikas also come handy while dealing with such ambiguities.\\\\
+The Aṣṭādhyāyī is not just a collection of grammatical rules but is a specialized in many ways. Pāṇini has employed various tools and techniques which are unique to Aṣṭādhyāyī and are not seen in other grammatical texts. For instance, the ideas in one rule can carry over to the next rules by a technique called Anuvṛtti. This Anuvṛtti engrained structure is one of the ways in which Pāṇini ensures brevity. Also, the rules in one chapter may control rules in another. In this way, Pāṇini created a brief and immensely dense work (\cite{learnsanskrit}). The rules have been broadly classified into six broad categories: saṃjñā, vidhi, niyama, atideśa, adhikāra and paribhāṣā rules. \\\\
+The first category of specialized rules is saṃjñā, where essential words can have technical meanings which exist only within the scope of Aṣṭādhyāyī. One such example is the word 'vṛddhi’ which originally means "growth" or "gain", but within Aṣṭādhyāyī, the letters ā, e and au are called 'vṛddhi’. The second category is vidhi, which describes things such as word formation, and the application of sandhi. The third category of rules is the niyama, which contradicts the earlier vidhi rules. Essentially, it contains an exception to a previous rule. The fourth ones are the atideśa rules, which specify that some feature has the properties of another. The fifth type of rule is the adhikāra rules. This sort of rule establishes an idea that extends to the rules that follow it. Such a rule sometimes specifies how far it extends, but usually, its extension is clear from the context. The sixth type is paribhāṣā rules. The exciting thing about these rules is that they do not address the other rules; instead, they address the person reading them. Such a rule tells us how we should read and understand the other rules in Aṣṭādhyāyī. \\\\
+Here we have dealt with words that are outputs of the function which takes inputs in the form of dhātus. These output words are called ‘padams’ or ‘padas’ in Sanskrit grammar. ‘Padam’ is a technical term in Sanskrit grammar and is roughly translated as ‘word’ in English (\cite{Swamiji}). In the Aṣṭādhyāyī it is defined as 
+\texthindi{'सुप्तिङन्तम् पदम्'} which means ‘Subantam and Tiṅantam are called padam’ i.e. the words ending with sup and tiṅ are called padam.\\\\
+In the Sanskrit grammar tradition, the word-roots are also called ‘prakṛti’ (\cite{prasad}). It is defined as a root term that does not have any kind of prefix or suffix attached to it, example rāma, phala, deva. Prakṛti is further classified into two types: dhātu and prātipadika.\\ 
+
+\begin{itemize}
+	
+	\item[]a.	Dhātu: The basic roots of verbs are called dhātu, like jā, khā, and cala. ‘tiṅ pratyaya’ is added to the dhātus to form padas. This can be depicted in the form of an equation as follows: \\
+	\begin{equation}
+		\text{\texthindi{धातु}} +  \text{\texthindi{तिंङ् प्रत्यय}} = \text{\texthindi{ `पद'}}
+	\end{equation}
+	
+	\item b. Prātipadika: All noun words except dhātu are called Prātipadikas. Prātipadikas are formed by adding ‘sup pratyaya’ to the root words. This can be depicted in the form of an equation as follows: \\
+	\begin{equation}
+		\text{\texthindi{प्रातिपदिक + सुप् प्रत्यय = 'पद'}}
+	\end{equation}
+	\\
+\end{itemize}
+Affixes that are added to the Prakṛti to form padas (words) are called Pratyayas. In Sanskrit grammar the Pratyayas are of two types: -\\
+a. Tiṅ Pratyaya (\texthindi{तिङ् प्रत्यय}-) pratyayas that form verbs when combined with roots are called Tiṅ Pratyayas.\\ 
+\begin{equation}
+	\text{\texthindi{
+		गच्छ+ति= गच्छति (ति = तिङ् प्रत्यय)
+}}\end{equation}
+A schematic diagram of the formation of Padam by addition of Pratyayas is shown in  Figure~\ref{fig:padam}.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{padam.png}
+	\hspace{1mm}
+	\caption{Formation of Padam} 
+	\label{fig:padam}
+\end{figure}
+
+%\begin{table}[h!]
+There are 10 different Tiṅantapada (words that end with Tiṅ pratyaya) forms known as lakāras. Each lakāra has verb-forms for three persons (\texthindi{पुरुष}) and three numbers\texthindi{ (वचन). }So, in total each lakāra has 9 different verb-forms in it (Sanskrit and Indology Foundation, 2005). The gender of the subject does not affect the verb-forms.\\\\
+b.	Sup Pratyaya \texthindi{(सुप् प्रत्यय)}- pratyayas that form nouns when combined with roots are called sup Pratyayas. Sup pratyayas are always added to dhātus only.\texthindi{
+	बालक + औ = बालकौ (औ = सुप् प्रत्यय)
+}\\\\
+Sup pratyayas are obtained from the sūtra 4.1.2 \texthindi{ स्वौजसमौट्छष्टाभ्याम्भिस्ङेभ्याम्भ्यस्ङसिभ्याम्भ्यस्ङसोसाम्ङ्योस्सुप्}, which says that ‘After stems that end with feminine teminations ङी or आप् or after a  prātipadika , the following case-affixes are used - 1st - \texthindi{सु (स), औ , जस् (अस्)। }2nd - \texthindi{अम् , औट् (औ), शस् (अस्)।} 3rd \texthindi{- टा (आ), भ्याम् , भिस्} । 4th\texthindi{ - ङे (ए), भ्याम् , भ्यस्। }5th - \texthindi{ङसि (अस्), भ्याम् , भ्यस्}। \texthindi{6th - ङस् (अस्), ओस् , आम्।} 7th -\texthindi{ ङि (इ), ओस् , सुप् (सु)।’}.
+There are 21 pratyayas which are divided into 7 vibhaktis \footnote{The sambodhana vibhakti is of the same form as the Prathama vibhakti and hence is not counted separately.} , and thus sup pratyayas are also called vibhaktis. Further each of these vibhaktis has three vacanas called \texthindi{एकवचनम्, द्विवचनम्} and,\texthindi{ बहुवचनम्.}
+
+a. Tiṅ Pratyaya (\texthindi{तिङ् प्रत्यय})- pratyayas that form verbs when combined with roots are called Tiṅ Pratyayas. 
+(\texthindi{गच्छ} + \texthindi{ति} = \texthindi{गच्छति} (\texthindi{ति} = \texthindi{तिङ् प्रत्यय})
+There are 10 different Tiṅantapada (words that end with Tiṅ pratyaya) forms known as lakāras. Each lakāra has verb-forms for three persons (\texthindi{पुरुष}) and three numbers (\texthindi{वचन}). So, in total each lakāra has 9 different verb-forms in it (Sanskrit \& Indology Foundation, 2005). The gender of the subject does not affect the verb-forms.
+b.	Sup Pratyaya (\texthindi{सुप् प्रत्यय})- pratyayas that form nouns when combined with roots are called sup Pratyayas. Sup pratyayas are always added to dhātus only.
+\texthindi{बालक} + \texthindi{औ } = \texthindi{बालकौ} (\texthindi{औ } =  \texthindi{सुप् प्रत्यय})
+Sup pratyayas are obtained from the sūtra 4.1.2 \texthindi{स्वौजसमौट्छष्टाभ्याम्भिस्ङेभ्याम्भ्यस्ङसिभ्याम्भ्यस्ङसोसाम्ङ्योस्सुप्},  which says that ‘After stems that end with feminine teminations \texthindi{ङी} or \texthindi{आप् } or after a  prātipadika , the following case-affixes are used - 1st - \texthindi{सु (स), औ , जस् (अस्)।}  2nd -\texthindi{ अम् , औट् (औ), शस् (अस्)।} 3rd - \texthindi{टा (आ), भ्याम् , भिस् ।} 4th   - \texthindi{ ङे (ए), भ्याम् , भ्यस्।} 5th -\texthindi{ ङसि (अस्), भ्याम् , भ्यस्।} 6th - \texthindi{ङस् (अस्), ओस् , आम्। } 7th  - \texthindi{ ङि (इ), ओस् , सुप् (सु)।’}.\\
+There are 21 pratyayas which are divided into 7 vibhaktis , and thus sup pratyayas are also called vibhaktis. Further each of these vibhaktis has three vacanas called \texthindi{एकवचनम्, द्विवचनम्} and, \texthindi{बहुवचनम्}.
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+\texthindi{विभक्ति} &	\texthindi{एकवचन}	&\texthindi{द्विवचनम्}&	\texthindi{बहुवचनम्} \\ 
+\hline
+\texthindi{प्रथमा}
+&	\texthindi{सु}	&\texthindi{औ}&	\texthindi{जस्} \\
+\texthindi{द्वितीया} &	
+\texthindi{अम्}	&\texthindi{औट्}&	\texthindi{शस्} 
+\\\texthindi{तृतीया}&	\texthindi{टा}	&\texthindi{भ्याम्}&	\texthindi{भिस्} \\\texthindi{चतुर्थी}&	\texthindi{ङे}	&\texthindi{भ्याम्}&	\texthindi{भ्यस्} \\\texthindi{पञ्चमी}&	
+\texthindi{ङसि}	&\texthindi{भ्याम्}&	\texthindi{भ्यस्} \\\texthindi{षष्ठी}& \texthindi{ङस्}	&\texthindi{ओस्}&	\texthindi{आम्} 
+\\\texthindi{सप्तमी}&	\texthindi{ङि}	&\texthindi{ओस्}&	\texthindi{सुप्}\\  \hline
+\end{tabular}
+\caption{Table of sup pratyayas}
+\label{table:3.1}
+\end{center}
+\end{table}
+
+Prātipadikas are meaningful nominal stems which are neither verbal roots nor pratyayas. On adding sup pratyayas to these, we get nouns. Prātipadikas are broadly divided into two types:\\
+\texthindi{अव्युत्पन्न} prātipadika (Underived pratipadika) and \texthindi{व्युत्पन्न} prātipadika  (Derived pratipadika). Further, the derived Prātipadikas are divided into three types:\\ \texthindi{कृदन्त} (kṛdanta), \texthindi{तद्धितान्त} (taddhitānta) and, \texthindi{समास} (samāsa).\\
+1.	\texthindi{अव्युत्पन्न} prātipadika  (Underived prātipadika):\\ These words are not derived from dhātus but are rather naturally available.\\
+2.	\texthindi{व्युत्पन्न} prātipadika  (Derived prātipadika):\\ These words are derived from the dhātus\footnote{One school of thought believes that some words are not derived from the dhātus while another believes that all words are derived from dhātus. Maharshi Pāṇini has accepted both the schools and written two separate sūtras 1-2-45 and 1-2-46 which are as follows:\\
+	1-2-45 \texthindi{अर्थवदधातुरप्रत्ययः प्रातिपदिकम्} (Any meaningful word which is not a \texthindi{धातु} or a \texthindi{प्रत्ययान्त} is called \texthindi{प्रातिपदिक}.)
+	1-2-46 \texthindi{कृत्तद्धितसमासाश्च} (The forms ending \texthindi{कृत्} affixes or\texthindi{ तद्धित} affixes, or compound are also called \texthindi{प्रातिपदिक}।)
+} .
+a.	\texthindi{कृदन्त} (kṛdanta): from sūtra 3-1-91 till the end of the 3rd adyāya, all non-Tiṅ pratyayas are called kṛdanta pratyayas\\
+Example: Consider a dhātu \texthindi{पच्}, to which a \texthindi{कृत्} pratyaya\texthindi{ ण्वुल्} is added.\\
+
+
+\begin{table}[h!]
+	\begin{center}
+		\begin{tabular}{ |p{2cm}|p{14cm}| } 
+ 		\hline
+		\multirow{2}{*}{\texthindi{पच् + ण्वुल्}} &	
+		\texthindi{ण्वुल्} is added as per sūtra 
+		3-1-133 \texthindi{ण्वुल्तृचौ}
+		The affixes \texthindi{ण्वुल् (अक्)} and\texthindi{ तृच् (तृ)} are placed after all verbal roots, expressing the agent.\\
+		\hline
+		\multirow{2}{*}{\texthindi{पच् + अक्}}&
+		\texthindi{ण्वुल्} is replaced by \texthindi{अक} as per sūtra 7-1-1 \texthindi{युवोरनाकौ}
+		For \texthindi{यु} and \texthindi{वु} (nasalized) in an affix, are substituted, respectively, \texthindi{अन} and \texthindi{अक}।\\
+		\hline
+		\multirow{2}{*}{\texthindi{पाचक}} &	
+		becomes pratipadik by the sūtra
+		1-2-46 \texthindi{कृत्तद्धितसमासाश्च}
+		The forms ending \texthindi{कृत्} affixes or \texthindi{तद्धित} affixes, or compound are also called prātipadika ।\\
+		\hline
+		\end{tabular}
+		\caption{Generation of kṛdanta prātipadikas}
+		\label{table:3.2}
+	\end{center}
+\end{table}
+
+b.	\texthindi{तद्धितान्त} (taddhitānta): From sūtra 4-1-76 till the end of the 5th adhyaya, all pratyayas are called taddhita pratyayas.
+Example: \texthindi{पुरोहित} + \texthindi{यक्} = \texthindi{पौरोहित्य}\\
+c.	\texthindi{समास} (samāsa): A word unit made up of two or more words which is having a single composite meaning is called Samāsa (Compound word). \\
+Example: \texthindi{दशरथस्य पुत्रः → दशरथपुत्रः}
+
+
+
+\section{Motivation}
+Mathematical modelling of grammar is one of the first steps towards formalization of a natural language. Formalizing a natural language enables us to remove the ambiguities that are inherent to a natural language hence making it suitable for computing purposes. Here we have constructed mathematical funcions for pratyayas such that input to the function in the form of dhātus generates an output $y$. This depiction of Pāṇinian tools and techniques in a conventional mathematical manner is also a way to understand Pāṇini and is of great use for people who want to understand Pāṇinian work but do not have a background of linguistics or Sanskrit grammar. A comparison between Pāṇinian techniques and functions helps gives us an insight into his genius methodologies of ensuring brevity while writing grammar so much so that he could write an exhaustive grammar in just 4000 rules( sūtras) without compromising with its completeness.
+
+
+
+\section{Research objectives}
+
+\section{Thesis outline}
+The subject matter of the thesis is presented in the following five chapters, 
+\begin{enumerate}[label=\checkmark]
+	\item	Chapter-1 gives an overview of formation of words by the addition of pratyayas. 
+	\item	Chapter-2 elucidates the previous attempts that have been made for the formalization of Sanskrit language and how Aṣṭādhyāyī proves to be a good starting point for it. 
+	\item	Chapter 3 describes the methodology used and the notationthat has been used to contruct functions.
+	\item Chapter-4 first discusses the pre-requisites that are needed to construct the functions. Then it further contains the definition and the cases of the four functions namely: ṇic, tumun, yaṅ and san.  
+	\item	Chapter-5 Conclusion  
+
+\end{enumerate}
+
